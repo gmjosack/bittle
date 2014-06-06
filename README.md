@@ -19,11 +19,12 @@ pip install bittle
 
 from bittle import FlagWord
 
-status = FlagWord(["pending", "approved", "actioned"])
+Status = FlagWord(["pending", "approved", "actioned"])
 
+status = Status()
 status.set(status.approved)
-status.has(status.approved)  # True
-status.has(status.actioned)  # False
+status.has(Status.approved)  # True
+status.has("actioned")  # False
 
 ```
 
